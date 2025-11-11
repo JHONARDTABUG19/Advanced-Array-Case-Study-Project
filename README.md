@@ -1,56 +1,103 @@
-ACADEMIC ANALYTICS LITE
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Academic Analytics Lite</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
 
-This python based program handles data ingestion,validation,basic CRUD operations, and detailed grade analytics and reporting.
+  <!-- Title -->
+  <h1 style="color: #ff6600; text-align: center;">🎓 Academic Analytics Lite</h1>
+  <p style="text-align:center; font-size:16px;">
+    A <b>Python-based program</b> that handles <b>data ingestion, validation, CRUD operations</b>, 
+    and detailed <b>grade analytics & reporting</b> using a Text-based User Interface (TUI).
+  </p>
 
-FEATURES
-The command line menu is run by a TUI 
+  <!-- Features -->
+  <h2 style="color: #007acc;">✨ Features</h2>
+  <div style="border-left:5px solid #007acc; padding-left:10px;">
+    <h3>🗂️ Data Management</h3>
+    <ul>
+      <li>➕ Add/Save Students – Insert new students into the records.</li>
+      <li>📖 Read/Display – View the current contents of the student record file.</li>
+      <li>❌ Delete by ID – Remove a specific student by ID.</li>
+      <li>🔢 Sort Data – Sort the dataset based on any column.</li>
+    </ul>
 
-Data Management
-Add/Save Students - Insert new student in the records.
-Read/Display - View the current contents of the student record file.
-Delete by ID - Remove a specific student in the record by ID.
-Sort Data - Sort the entire dataset based on any column
+    <h3>📊 Grade Analysis</h3>
+    <ul>
+      <li>📈 Weighted Grade Computation – Calculate weighted grades for each student.</li>
+      <li>📊 Grade Distribution – Analyze grade frequency (A–F).</li>
+      <li>🏆 Percentiles – Identify top and bottom 10% students.</li>
+      <li>📉 Improvement Tracking – Compare Final vs Midterm performance.</li>
+    </ul>
+  </div>
 
-Grade Analysis
-Weighted grade computation
-Grade Distribution
-Percentiles
-Improvement Trackinga
+  <!-- File Structure -->
+  <h2 style="color: #007acc;">🗃️ File Structure</h2>
+  <table style="width:100%; border-collapse: collapse;">
+    <thead>
+      <tr style="background-color:#f0f8ff;">
+        <th style="border:1px solid #ddd; padding:8px; text-align:left;">File Name</th>
+        <th style="border:1px solid #ddd; padding:8px; text-align:left;">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">main.py</td>
+        <td style="border:1px solid #ddd; padding:8px;">Menu and user input handling, calls functions from other modules.</td>
+      </tr>
+      <tr style="background-color:#f9f9f9;">
+        <td style="border:1px solid #ddd; padding:8px;">ingest.py</td>
+        <td style="border:1px solid #ddd; padding:8px;">`clean_ingest`: Reads studentRecord.csv, validates data, checks ranges (0–100), handles missing values.</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">array_operations.py</td>
+        <td style="border:1px solid #ddd; padding:8px;">Data manipulation: saving, deleting, selecting, projecting, sorting datasets.</td>
+      </tr>
+      <tr style="background-color:#f9f9f9;">
+        <td style="border:1px solid #ddd; padding:8px;">analytics.py</td>
+        <td style="border:1px solid #ddd; padding:8px;">Weighted averages and improvement tracking functions.</td>
+      </tr>
+      <tr>
+        <td style="border:1px solid #ddd; padding:8px;">reportz.py</td>
+        <td style="border:1px solid #ddd; padding:8px;">Generate summary reports, export at-risk student list, display section-specific data.</td>
+      </tr>
+      <tr style="background-color:#f9f9f9;">
+        <td style="border:1px solid #ddd; padding:8px;">studentRecord.csv</td>
+        <td style="border:1px solid #ddd; padding:8px;">CSV file containing student records.</td>
+      </tr>
+    </tbody>
+  </table>
 
-File Structure
+  <!-- Prerequisites -->
+  <h2 style="color: #007acc;">🛠️ Prerequisites</h2>
+  <div style="border:2px solid #007acc; padding:15px; border-radius:10px; background-color:#f0f8ff;">
+    <p>Python 3.6+ is required.</p>
+    <p>Install dependencies:</p>
+    <pre style="background-color:#e0e0e0; padding:8px;">pip install numpy termcolor</pre>
+    <p><b>Libraries:</b></p>
+    <ul>
+      <li><b>numpy</b> → for analytics and calculations</li>
+      <li><b>termcolor</b> → for colored text output in the terminal</li>
+    </ul>
+  </div>
 
-File Name
-Description
-main.py
-Contains the menu  and handles user input, calling functions from other modules.
-ingest.py
-Contains clean_ingest function responsible for reading  studentRecord.csv, validating data types, range check(0 - 100), and handling missing values.
-array_operations.py
-Used for data manipulation and it includes functions for saving new data, overwriting cleaned data, deleting rows, selecting columns,projecting records and sorting datasets.
-analytics.py
-Contains all functions for calculating weighted averages and checking for improvements.
-reportz.py
-Contains functions for generating overall summary reports, exporting at-risk student list, and displaying section specific data.
-studentRecord.csv
-File containing the student records.
+  <!-- How to Run -->
+  <h2 style="color: #007acc;">▶️ How to Run</h2>
+  <ol>
+    <li>Ensure all Python files and <code>studentRecord.csv</code> are in the same directory.</li>
+    <li>Open your terminal in that directory.</li>
+    <li>Run the program: <pre style="background-color:#e0e0e0; padding:8px;">python main.py</pre></li>
+    <li>Follow the on-screen menu prompts to interact with the system.</li>
+  </ol>
 
+  <!-- AI Use Disclosure -->
+  <h2 style="color:#007acc;">🤖 AI Use Disclosure</h2>
+  <p>
+    Portions of this script were generated or refined using <b>ChatGPT</b> for debugging, grammar corrections, and optimization. 
+    All AI outputs were <b>verified, tested, and modified by the author</b>.
+  </p>
 
-Prerequisites
-To run this application, you need Python and the numpy library.
-
-1.Ensure that you have Python 3.6+ installed.
-2. Install numpy using this command in the Command Prompt
-
-
-
-
-
-How to Run
-1. Ensure that you have python files and the data file in the same directory.
-2.Open your terminal in that directory.
-3. Run the program normally or with python main.py
-4.Follow the on screen menu prompts to interact with the system.
-
-
-AI USE DISCLOSURE
-AI Disclosure: Portions of this script were generated or refined using ChatGPT  for debugging, fixing grammatical errors and optimization. The author verified, tested, and modified all AI outputs.
+</body>
+</html>
